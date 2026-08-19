@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scrodia · Desarrollador Python/Django</title>
+<meta name="description" content="Portafolio de Scrodia: aplicaciones web completas con Django, Python y JavaScript.">
+<style>
+  :root{
+    --bg:#0f172a; --card:#1e293b; --text:#e2e8f0; --muted:#94a3b8;
+    --accent:#38bdf8; --accent2:#a78bfa; --border:#334155;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+  .container{max-width:1000px;margin:0 auto;padding:0 20px}
+  header{position:sticky;top:0;background:rgba(15,23,42,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);z-index:10}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+  .logo{font-weight:800;font-size:1.2rem;color:var(--accent);text-decoration:none}
+  nav a.link{color:var(--muted);text-decoration:none;margin-left:20px;font-size:.95rem}
+  nav a.link:hover{color:var(--accent)}
+  .hero{padding:90px 0 60px;text-align:center}
+  .hero h1{font-size:2.6rem;margin-bottom:10px}
+  .hero h1 span{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p{color:var(--muted);max-width:620px;margin:0 auto 26px}
+  .btn{display:inline-block;padding:10px 22px;border-radius:8px;text-decoration:none;font-weight:600;margin:4px;transition:transform .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:var(--accent);color:#0f172a}
+  .btn-ghost{border:1px solid var(--border);color:var(--text)}
+  section{padding:60px 0}
+  h2{font-size:1.6rem;margin-bottom:8px}
+  h2::after{content:'';display:block;width:50px;height:3px;background:var(--accent);margin-top:6px;border-radius:2px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin-top:28px}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:transform .2s,border-color .2s}
+  .card:hover{transform:translateY(-4px);border-color:var(--accent)}
+  .card img{width:100%;height:190px;object-fit:cover;border-bottom:1px solid var(--border)}
+  .card-body{padding:20px}
+  .card h3{margin-bottom:8px}
+  .card p{color:var(--muted);font-size:.95rem;margin-bottom:14px}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+  .tag{background:rgba(56,189,248,.12);color:var(--accent);font-size:.75rem;padding:4px 10px;border-radius:99px}
+  .links a{color:var(--accent);text-decoration:none;font-size:.9rem;margin-right:14px}
+  .links a:hover{text-decoration:underline}
+  .stack{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .stack span{background:var(--card);border:1px solid var(--border);padding:8px 16px;border-radius:99px;font-size:.9rem}
+  footer{border-top:1px solid var(--border);padding:30px 0;text-align:center;color:var(--muted);font-size:.9rem}
+  footer a{color:var(--accent);text-decoration:none}
+</style>
+</head>
+<body>
+
+<header><div class="container">
+  <nav>
+    <a class="logo" href="#">&lt;/Scrodia&gt;</a>
+    <div>
+      <a class="link" href="#proyectos">Proyectos</a>
+      <a class="link" href="#stack">Stack</a>
+      <a class="link" href="#contacto">Contacto</a>
+    </div>
+  </nav>
+</div></header>
+
+<section class="hero"><div class="container">
+  <h1>Hola, soy <span>Scrodia</span> 👋</h1>
+  <p>Desarrollador web en formación especializado en Python y Django.
+     Construyo aplicaciones completas: modelos, backend, frontend, consumo de APIs
+     y despliegue en la nube.</p>
+  <a class="btn btn-primary" href="#proyectos">Ver proyectos</a>
+  <a class="btn btn-ghost" href="https://github.com/TU_USUARIO" target="_blank">Mi GitHub</a>
+</div></section>
+
+<section id="proyectos"><div class="container">
+  <h2>Proyectos destacados</h2>
+  <div class="grid">
+
+    <article class="card">
+      <img src="img/catalogo.png" alt="Catálogo de películas y series">
+      <div class="card-body">
+        <h3>🎬 Catálogo de Películas y Series</h3>
+        <p>Mi "Letterboxd" personal con la API de TMDB: ruleta descubridora por género,
+           tráilers embebidos, favoritas, estadísticas de horas de cine, tendencias
+           y export CSV. Desplegado en la nube.</p>
+        <div class="tags"><span>Django</span><span>API TMDB</span><span>Chart.js</span><span>Bootstrap</span></div>
+        <div class="links">
+          <a href="https://scrodia.pythonanywhere.com" target="_blank">🌐 Demo en vivo</a>
+          <a href="https://github.com/TU_USUARIO/catalogo-peliculas-django" target="_blank">💻 Código</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="img/gestor.png" alt="Gestor de tareas Kanban">
+      <div class="card-body">
+        <h3>📋 Gestor de Tareas Kanban</h3>
+        <p>App estilo Trello multiusuario: tablero con arrastrar y soltar vía AJAX,
+           dashboard con gráficas, buscador con filtros, etiquetas de colores,
+           subtareas, avisos de vencimiento y modo oscuro persistente.</p>
+        <div class="tags"><span>Django</span><span>AJAX</span><span>Auth</span><span>Chart.js</span></div>
+        <div class="links">
+          <a href="https://github.com/TU_USUARIO/gestor-tareas-django" target="_blank">💻 Código</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</div></section>
+
+<section id="stack"><div class="container">
+  <h2>Stack tecnológico</h2>
+  <div class="stack">
+    <span>🐍 Python</span><span>🎯 Django</span><span>🗄️ SQLite</span>
+    <span>🌐 HTML/CSS</span><span>⚡ JavaScript</span><span>🅱️ Bootstrap</span>
+    <span>📊 Chart.js</span><span>🔌 APIs REST</span><span>☁️ PythonAnywhere</span>
+    <span>🐙 Git/GitHub</span>
+  </div>
+</div></section>
+
+<footer id="contacto"><div class="container">
+  <p>¿Hablamos? · <a href="mailto:TU_CORREO@gmail.com">TU_CORREO@gmail.com</a> ·
+     <a href="https://github.com/TU_USUARIO" target="_blank">GitHub</a> ·
+     <a href="https://linkedin.com/in/TU_PERFIL" target="_blank">LinkedIn</a></p>
+  <p style="margin-top:8px">Hecho a mano con HTML y CSS · © 2026 Scrodia</p>
+</div></footer>
+
+</body>
+</html>
